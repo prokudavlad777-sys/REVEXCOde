@@ -1,0 +1,19 @@
+appId: com.revex.code
+productName: REVEX CODE
+directories:
+  output: dist
+files:
+  - src/**/*
+  - resources/**/*
+  - node_modules/**/*
+  - "!node_modules/.cache"
+  - "!**/*.map"
+win:
+  target:
+    - target: nsis
+      arch: [x64]
+  icon: resources/icon.ico
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true

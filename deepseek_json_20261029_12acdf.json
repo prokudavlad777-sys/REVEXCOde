@@ -1,0 +1,107 @@
+{
+  "models": [
+    {
+      "name": "qwen2.5-coder:1.5b",
+      "params": "1.5B",
+      "quant": "q4_K_M",
+      "minRAM": 4,
+      "minVRAM": 2,
+      "diskGB": 1.2,
+      "ctx": 32768,
+      "multimodal": false,
+      "tier": "fast",
+      "notes": "Найшвидша, для автодоповнення й простих задач"
+    },
+    {
+      "name": "qwen2.5-coder:7b",
+      "params": "7B",
+      "quant": "q4_K_M",
+      "minRAM": 8,
+      "minVRAM": 6,
+      "diskGB": 4.7,
+      "ctx": 32768,
+      "multimodal": false,
+      "tier": "balanced",
+      "notes": "Баланс швидкості та якості, рекомендована за замовчуванням"
+    },
+    {
+      "name": "qwen2.5-coder:14b",
+      "params": "14B",
+      "quant": "q4_K_M",
+      "minRAM": 16,
+      "minVRAM": 12,
+      "diskGB": 9.0,
+      "ctx": 32768,
+      "multimodal": false,
+      "tier": "balanced",
+      "notes": "Краща якість для складного коду"
+    },
+    {
+      "name": "qwen2.5-coder:32b",
+      "params": "32B",
+      "quant": "q4_K_M",
+      "minRAM": 32,
+      "minVRAM": 20,
+      "diskGB": 20.0,
+      "ctx": 32768,
+      "multimodal": false,
+      "tier": "heavy",
+      "notes": "Для складних рефакторингів і великих проєктів"
+    },
+    {
+      "name": "deepseek-coder-v2:16b",
+      "params": "16B",
+      "quant": "q4_K_M",
+      "minRAM": 16,
+      "minVRAM": 12,
+      "diskGB": 9.0,
+      "ctx": 65536,
+      "multimodal": false,
+      "tier": "balanced",
+      "notes": "Альтернатива Qwen для Python/C++"
+    },
+    {
+      "name": "qwen2.5vl:7b",
+      "params": "7B",
+      "quant": "q4_K_M",
+      "minRAM": 8,
+      "minVRAM": 6,
+      "diskGB": 5.5,
+      "ctx": 32768,
+      "multimodal": true,
+      "tier": "vision",
+      "notes": "Розуміє зображення — для скриншотів помилок"
+    },
+    {
+      "name": "llava:7b",
+      "params": "7B",
+      "quant": "q4_K_M",
+      "minRAM": 8,
+      "minVRAM": 6,
+      "diskGB": 4.7,
+      "ctx": 32768,
+      "multimodal": true,
+      "tier": "vision",
+      "notes": "Vision-модель, швидка альтернатива"
+    },
+    {
+      "name": "nomic-embed-text",
+      "params": "137M",
+      "quant": "f16",
+      "minRAM": 2,
+      "minVRAM": 1,
+      "diskGB": 0.3,
+      "ctx": 8192,
+      "multimodal": false,
+      "tier": "embed",
+      "notes": "Для RAG-індексації файлів проєкту"
+    }
+  ],
+  "tiers": {
+    "fast": "Прості питання, автодоповнення, швидкі відповіді",
+    "balanced": "Повсякденна робота з кодом",
+    "heavy": "Складні задачі, великі контексти",
+    "vision": "Аналіз зображень і скриншотів",
+    "embed": "Службова модель для індексації"
+  }
+}
